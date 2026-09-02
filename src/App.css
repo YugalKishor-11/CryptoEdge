@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    /*Use @apply to write Tailwind classes in your CSS */
+    @apply text-black;
+  }
+}
