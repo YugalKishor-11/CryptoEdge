@@ -5,10 +5,11 @@ export const fetchMarkets = async () => {
     params: {
       vs_currency: 'usd',
       order: 'market_cap_desc',
-      per_page: 50,
+      per_page: 7,
       page: 1,
       sparkline: false
     }
   });
+  
   return response.data;
 };

@@ -6,3 +6,5 @@
     @apply text-black;
   }
 }
+@source "../app/**/*.{js,ts,jsx,tsx}";
+@source "../components/**/*.{js,ts,jsx,tsx}";
