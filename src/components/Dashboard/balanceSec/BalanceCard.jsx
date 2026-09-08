@@ -1,10 +1,10 @@
 import Icon from "../../../assets/icon.svg"
 import Button from "../../../assets/Button.svg"
-import {ChevronDown} from"lucide-react"
+import { ChevronDown } from "lucide-react"
 
 export default function BalanceCard() {
     return (
-        <div className="rounded-2xl bg-[#429EFF] p-3 h-32 text-white ">
+        <div className="rounded-2xl bg-[#429EFF] p-4 h-32 text-white ">
 
             <div className="flex justify-between items-center">
 
@@ -15,21 +15,21 @@ export default function BalanceCard() {
                     </h2>
                 </div>
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center justify-between gap-2">
                     <div className="flex items-center justify-around border w-25 h-11.5 rounded-3xl">
-                         <span className="text-sm ">
-                        Weekly
-                    </span>
-                    <ChevronDown size={20}/>
+                        <span className="text-sm ">
+                            Weekly
+                        </span>
+                        <ChevronDown size={20} />
                     </div>
-                    
+
 
                     <img src={Button} alt="three dot" className="w-12 h-auto flex items-center" />
                 </div>
 
             </div>
 
-            <div className="mt-6 flex justify-between">
+            <div className="mt-4 flex justify-between">
                 <h3 className="text-2xl font-bold">
                     $120,980
                 </h3>

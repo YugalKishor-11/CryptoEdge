@@ -1,4 +1,4 @@
-export default function TopMover({ name, symbol, price, change ,image}) {
+export default function TopMover({ name, symbol, price, change, image }) {
     const isPositive = change.startsWith("+");
 
     return (
@@ -9,7 +9,7 @@ export default function TopMover({ name, symbol, price, change ,image}) {
 
                 <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center">
                     <span className="text-sm font-bold text-slate-700">
-                       <img src={image} alt="img" className="h-8 w-auto"/>
+                        <img src={image} alt="img" className="h-8 w-auto" />
                     </span>
                 </div>
 
@@ -26,8 +26,8 @@ export default function TopMover({ name, symbol, price, change ,image}) {
             </div>
             <p
                 className={`text-xs font-medium ${isPositive
-                        ? "text-green-500"
-                        : "text-red-500"
+                    ? "text-green-500"
+                    : "text-red-500"
                     }`}
             >
                 {change}

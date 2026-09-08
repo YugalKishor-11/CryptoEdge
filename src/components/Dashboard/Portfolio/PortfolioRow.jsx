@@ -45,11 +45,10 @@ export default function PortfolioRow({
 
             {/* Change */}
             <div
-                className={`text-sm font-medium ${
-                    isPositive
-                        ? "text-green-500"
-                        : "text-red-500"
-                }`}
+                className={`text-sm font-medium ${isPositive
+                    ? "text-green-500"
+                    : "text-red-500"
+                    }`}
             >
                 {change}
             </div>

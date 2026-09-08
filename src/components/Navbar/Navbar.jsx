@@ -3,7 +3,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import UserMenu from "./UserMenu";
-import AI from "../../assets/ai2.svg"
+import AI from "../../assets/navai.svg"
 import logo from "../../assets/logo.svg"
 import Menu from "../../assets/menu.svg"
 import Logo from "../../assets/SearchLine.svg"
@@ -16,11 +16,11 @@ export default function Navbar({ onClick }) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const navLinks = [
-        { name: 'Home', path: '/' },
-        { name: 'My Assets', path: '/dashboard' },
-        { name: 'Trade', path: '/das' },
-        { name: 'Market', path: '/da ' },
-        { name: 'Analytic', path: '/d' },
+        { name: 'Home', path: '/home' },
+        { name: 'My Assets', path: '/myasset' },
+        { name: 'Trade', path: '/trade' },
+        { name: 'Market', path: '/market' },
+        { name: 'Analytic', path: '/analytic' },
     ];
 
 
@@ -51,7 +51,7 @@ export default function Navbar({ onClick }) {
                     {/* Navigation */}
 
 
-                    <nav className="hidden lg:flex items-center gap-1.5 font-sans text-xs">
+                    <nav className="hidden lg:flex items-center gap-2 font-sans text-xs">
                         {navLinks.map((link) => (
                             <NavLink
                                 key={link.name}
@@ -59,7 +59,7 @@ export default function Navbar({ onClick }) {
                                 className={({ isActive }) =>
                                     // Using a template literal to conditionally apply classes
                                     `px-2 py-2 rounded-xl text-sm font-medium transition-colors ${isActive
-                                        ? ' text-blue-600 bg-white rounded-t-2xl font-bold' // The "Clicked" / Active State
+                                        ? ' text-blue-600 bg-white  rounded-t-3xl z-10 font-bold' // The "Clicked" / Active State
                                         : 'text-black hover:text-blue-500 ' // The Default State
                                     }`
                                 }

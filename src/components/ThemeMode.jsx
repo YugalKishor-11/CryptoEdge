@@ -34,16 +34,16 @@ export default function ThemeMode() {
       {/* 3. Swap the icon based on the current state */}
       {isDark ? (
         <>
-      <div className="flex items-center">
-        <Sun className="w-5 h-5" />
-        <h1 className='text-xl'>Light</h1>
-      </div>
-      </>
+          <div className="flex items-center">
+            <Sun className="w-5 h-5" />
+            <h1 className='text-xl'>Light</h1>
+          </div>
+        </>
       ) : (<>
-      <div className="flex items-center">
-        <Moon className="w-5 h-5" />
-        <h1 className='text-xl'>Dark</h1>
-      </div>
+        <div className="flex items-center">
+          <Moon className="w-5 h-5" />
+          <h1 className='text-xl'>Dark</h1>
+        </div>
       </>
       )}
     </button>

@@ -1,9 +1,19 @@
 import { useEffect, useRef, useState } from "react";
-import {ChevronDown, User, Settings, LogOut} from "lucide-react";
-
+import { useNavigate } from "react-router-dom";
+import { ChevronDown, User, Settings, LogOut } from "lucide-react";
+import image from "../../assets/intersect.svg"
 function UserMenu() {
     const [isOpen, setIsOpen] = useState(false);
     const menuRef = useRef(null);
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        // 1. Clear the authentication state
+        localStorage.removeItem("isAuthenticated");
+
+        // 2. Redirect the user to the login page
+        navigate("/login", { replace: true });
+    };
 
     // Close menu when clicking outside
     useEffect(() => {
@@ -49,7 +59,7 @@ function UserMenu() {
                         w-9
                         h-9
                         rounded-full
-                        bg-blue-500
+                       
                         text-white
                         flex
                         items-center
@@ -57,7 +67,7 @@ function UserMenu() {
                         font-semibold
                     "
                 >
-                    Y
+                    <img src={image} alt="profile" />
                 </div>
 
                 {/* Name */}
@@ -68,9 +78,8 @@ function UserMenu() {
                 {/* Arrow */}
                 <ChevronDown
                     size={16}
-                    className={`transition-transform duration-200 ${
-                        isOpen ? "rotate-180" : ""
-                    }`}
+                    className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""
+                        }`}
                 />
 
             </button>
@@ -162,6 +171,7 @@ function UserMenu() {
                             hover:bg-red-50
                             dark:hover:bg-red-950
                         "
+                        onClick={handleLogout}
                     >
                         <LogOut size={18} />
 

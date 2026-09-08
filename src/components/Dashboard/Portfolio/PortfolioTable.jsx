@@ -28,6 +28,24 @@ export default function PortfolioTable() {
             price: "$210",
             change: "-1.28%",
             value: "$1,680"
+        },
+        {
+            id: 4,
+            name: "BNB",
+            symbol: "BNB",
+            balance: "2.3 bnb",
+            price: "$2100",
+            change: "-1.36%",
+            value: "$1,780"
+        },
+        {
+            id: 5,
+            name: "Tether",
+            symbol: "USDT",
+            balance: "5 usdt",
+            price: "$2510",
+            change: "+2.56%",
+            value: "$2,680"
         }
     ];
 

@@ -32,11 +32,11 @@ export default function AnalyticsChart() {
     async function loadChart() {
       try {
         const result = await fetchMainChartData();
-  //
-  //       const chartData = result.prices.map(([timestamp, price]) => ({
-  //         day: new Date(timestamp).getDate(),
-  //         blue: price,
-  //       }));
+        //
+        //       const chartData = result.prices.map(([timestamp, price]) => ({
+        //         day: new Date(timestamp).getDate(),
+        //         blue: price,
+        //       }));
 
         setData(result);
       } catch (error) {
@@ -64,8 +64,8 @@ export default function AnalyticsChart() {
 
         <XAxis dataKey="day"
           axisLine={true}
-          tickLine={true} 
-          interval={23}/>
+          tickLine={true}
+          interval={23} />
 
         <YAxis
           axisLine={false}

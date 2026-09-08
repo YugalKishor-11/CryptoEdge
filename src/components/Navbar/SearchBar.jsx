@@ -11,7 +11,7 @@ export default function SearchBar({ value, onChange, onClick, placeholder = "Sea
                 alt="Company Logo"
                 className="w-5 h-auto"
                 onClick={onClick}
-                // onClick={() => alert("The image was clicked!")}
+            // onClick={() => alert("The image was clicked!")}
             />
 
             <input

@@ -37,7 +37,7 @@ export default function PriceChart() {
             {/* Chart placeholder */}
             <div className="h-64 flex items-center justify-center rounded-xl bg-slate-50">
                 {/* <p className="text-slate-400"> */}
-                    <AnalyticsChart/>
+                <AnalyticsChart />
                 {/* </p> */}
             </div>
 

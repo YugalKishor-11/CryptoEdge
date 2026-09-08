@@ -1,7 +1,7 @@
-import { 
-    Search, X, PieChart, ArrowLeftRight, Wallet, 
-    ArrowDownRight, ArrowUpRight, MoreVertical, 
-    ArrowDown, ArrowUp, CornerDownLeft 
+import {
+    Search, X, PieChart, ArrowLeftRight, Wallet,
+    ArrowDownRight, ArrowUpRight, MoreVertical,
+    ArrowDown, ArrowUp, CornerDownLeft
 } from 'lucide-react';
 
 export default function SearchModal({ onClose }) {
@@ -23,13 +23,13 @@ export default function SearchModal({ onClose }) {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-xs p-4">
             {/* Modal Container */}
             <div className="bg-white rounded-2xl w-full max-w-175 shadow-2xl flex flex-col overflow-hidden">
-                
+
                 {/* 1. Header & Search Input */}
                 <div className="flex items-center gap-3 p-4 border-b border-gray-100">
                     <div className="flex-1 flex items-center gap-2 bg-white">
-                        <input 
-                            type="text" 
-                            placeholder="Search for an asset, contacts" 
+                        <input
+                            type="text"
+                            placeholder="Search for an asset, contacts"
                             className="w-full text-gray-700 outline-none text-base placeholder:text-gray-400 bg-transparent"
                             autoFocus
                         />
@@ -69,7 +69,7 @@ export default function SearchModal({ onClose }) {
                                     <div className="flex items-center gap-3">
                                         <div className={`w-10 h-10 rounded-full flex items-center justify-center ${asset.color}`}>
                                             {/* Placeholder for coin icon - replace with real images later! */}
-                                            <span className="font-bold">{asset.symbol[0]}</span> 
+                                            <span className="font-bold">{asset.symbol[0]}</span>
                                         </div>
                                         <div className="flex items-center gap-2">
                                             <span className="font-semibold text-gray-900">{asset.name}</span>
@@ -100,7 +100,7 @@ export default function SearchModal({ onClose }) {
                                     <div className="flex items-center gap-3">
                                         {/* Placeholder Avatar */}
                                         <div className="w-10 h-10 rounded-full bg-slate-200 overflow-hidden">
-                                             <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${tx.id}`} alt="avatar" />
+                                            <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${tx.id}`} alt="avatar" />
                                         </div>
                                         <div className="flex items-center gap-2">
                                             <span className="font-semibold text-gray-900">{tx.name}</span>
@@ -126,13 +126,13 @@ export default function SearchModal({ onClose }) {
                         <div className="flex items-center gap-2">
                             <span>Navigate</span>
                             <div className="flex gap-1">
-                                <span className="p-1 border border-gray-200 rounded bg-white shadow-sm"><ArrowDown size={12}/></span>
-                                <span className="p-1 border border-gray-200 rounded bg-white shadow-sm"><ArrowUp size={12}/></span>
+                                <span className="p-1 border border-gray-200 rounded bg-white shadow-sm"><ArrowDown size={12} /></span>
+                                <span className="p-1 border border-gray-200 rounded bg-white shadow-sm"><ArrowUp size={12} /></span>
                             </div>
                         </div>
                         <div className="flex items-center gap-2">
                             <span>Select</span>
-                            <span className="p-1 border border-gray-200 rounded bg-white shadow-sm"><CornerDownLeft size={12}/></span>
+                            <span className="p-1 border border-gray-200 rounded bg-white shadow-sm"><CornerDownLeft size={12} /></span>
                         </div>
                         <div className="flex items-center gap-2">
                             <span>Close</span>

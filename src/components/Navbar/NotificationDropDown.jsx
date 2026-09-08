@@ -24,7 +24,7 @@ export default function NotificationDropdown() {
                     icon: <Clock size={18} className="text-blue-500" />,
                     title: "📈 Your portfolio is thriving!",
                     desc: "You've gained 12% this week. Check out the top-performin...",
-                    isUnread: true, 
+                    isUnread: true,
                 },
             ],
         },
@@ -58,11 +58,11 @@ export default function NotificationDropdown() {
             sm:w-105 
             bg-white rounded-3xl shadow-2xl border border-gray-100 z-50 overflow-hidden flex flex-col
         ">
-            
+
             {/* Header */}
             <div className="p-5 pb-0">
                 <h2 className="text-xl font-bold text-slate-900 mb-4">Notification</h2>
-                
+
                 {/* Tabs */}
                 <div className="flex items-center justify-between border-b border-gray-100">
                     <div className="flex gap-6">
@@ -89,21 +89,20 @@ export default function NotificationDropdown() {
                         <p className="text-xs font-semibold text-gray-800 px-4 py-3">
                             {group.date}
                         </p>
-                        
+
                         {/* Notification Items */}
                         <div className="flex flex-col gap-1">
                             {group.items.map((item) => (
-                                <div 
-                                    key={item.id} 
-                                    className={`relative flex gap-4 p-3 rounded-2xl cursor-pointer transition-colors ${
-                                        item.isUnread ? "bg-gray-50/80" : "hover:bg-gray-50"
-                                    }`}
+                                <div
+                                    key={item.id}
+                                    className={`relative flex gap-4 p-3 rounded-2xl cursor-pointer transition-colors ${item.isUnread ? "bg-gray-50/80" : "hover:bg-gray-50"
+                                        }`}
                                 >
                                     {/* Icon */}
                                     <div className="shrink-0 w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
                                         {item.icon}
                                     </div>
-                                    
+
                                     {/* Text Content */}
                                     <div className="flex-1 pr-4 min-w-0">
                                         <h4 className="text-sm font-semibold text-slate-900 mb-1 truncate">
