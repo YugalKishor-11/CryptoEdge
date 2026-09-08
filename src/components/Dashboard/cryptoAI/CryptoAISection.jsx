@@ -1,8 +1,8 @@
 import { Sparkles, ArrowRight } from "lucide-react";
 import AIFeatureCard from "./AIFeatureCard";
 import AISearch from "./AISearch";
-import Ai from "../../../assets/Ai-market.svg"
-import Aip from "../../../assets/Ai-pred.svg"
+import Ai from "../../../assets/AI-market.svg"
+import Aip from "../../../assets/AI-pred.svg"
 
 export default function CryptoAISection() {
     return (

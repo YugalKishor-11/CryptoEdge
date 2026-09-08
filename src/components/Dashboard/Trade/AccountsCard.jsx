@@ -1,5 +1,5 @@
 import { Plus } from "lucide-react";
-import pro from "../../../assets/intersect.svg"
+import pro from "../../../assets/Intersect.svg"
 
 export default function AccountsCard() {
     return (

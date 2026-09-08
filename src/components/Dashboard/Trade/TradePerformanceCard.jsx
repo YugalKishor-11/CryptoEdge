@@ -3,7 +3,7 @@ import { useState } from "react";
 import { BarChart3, ArrowUpRight } from "lucide-react";
 // import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, Cell } from "recharts";
 import chart from "../../../assets/Candlesticks.svg";
-import month from "../../../assets/month.svg";
+import month from "../../../assets/Month.svg";
 
 // const mockCandles = [
 //     { name: "Sep", open: 30, close: 45, high: 50, low: 20, isUp: true },
