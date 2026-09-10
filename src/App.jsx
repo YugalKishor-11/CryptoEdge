@@ -7,6 +7,7 @@ import MarketTab from './pages/MarketTab';
 import LoginField from './pages/LoginField';
 import Trade from './pages/Trade';
 import AnalyticsChartCard from './pages/AnalyticsChartCard';
+import  Settings  from './pages/Settings';
 
 // Initialize React Query
 const queryClient = new QueryClient({
@@ -44,6 +45,7 @@ export default function App() {
             <Route path='/trade' element={<Trade/>}/>
             <Route path='/market' element={<MarketTab />} />
             <Route path='/analytic' element={<AnalyticsChartCard/>}/>
+            <Route path='/settings' element={<Settings/>}/>
             {/* You will add /asset/:symbol and /portfolio routes here later */}
           </Route>
         </Routes>

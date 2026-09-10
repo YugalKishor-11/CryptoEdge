@@ -14,6 +14,9 @@ function UserMenu() {
         // 2. Redirect the user to the login page
         navigate("/login", { replace: true });
     };
+    const handlesetting= ()=>{
+        navigate("/settings")
+    }
 
     // Close menu when clicking outside
     useEffect(() => {
@@ -120,6 +123,7 @@ function UserMenu() {
                             hover:bg-slate-100
                             dark:hover:bg-slate-800
                         "
+                        onClick={handlesetting}
                     >
                         <User size={18} />
 
@@ -150,6 +154,8 @@ function UserMenu() {
                             Settings
                         </span>
                     </button>
+
+                    {/* <ThemeMode/> */}
 
 
                     {/* Divider */}
