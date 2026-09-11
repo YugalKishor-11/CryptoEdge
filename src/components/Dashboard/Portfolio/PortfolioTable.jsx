@@ -53,7 +53,7 @@ export default function PortfolioTable() {
         <div className="w-full overflow-y-auto">
 
             {/* Table Header */}
-            <div className="min-w-175 grid grid-cols-6 gap-4 px-4 py-3 text-xs font-medium text-slate-500 border-b border-slate-200">
+            <div className="min-w-175 grid grid-cols-6 gap-4 px-4 py-3 text-xs font-medium text-slate-500 dark:text-slate-400 border-b border-slate-200 dark:border-slate-700/50 transition-colors duration-200">
 
                 <span>Asset</span>
                 <span>Balance</span>
@@ -65,7 +65,7 @@ export default function PortfolioTable() {
             </div>
 
             {/* Rows */}
-            <div className="min-w-175 ">
+            <div className="min-w-175">
                 {portfolio.map((coin) => (
                     <PortfolioRow
                         key={coin.id}
@@ -77,4 +77,3 @@ export default function PortfolioTable() {
         </div>
     );
 }
-

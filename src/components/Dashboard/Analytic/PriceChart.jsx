@@ -2,46 +2,18 @@ import AnalyticsChart from "./AnalyticsChart";
 
 export default function PriceChart() {
     return (
-        <div className="rounded-2xl 
-        
-         p-5">
+        <div className="rounded-2xl m-5 pt-2 bg-white dark:bg-slate-900  border-slate-100 dark:border-slate-800 transition-colors duration-200">
 
-            <div className="flex items-center justify-between mb-5">
-
-                {/* <div>
-                    <h2 className="text-lg font-bold text-slate-900">
-                        Market Analytics
-                    </h2>
-
-                    <p className="text-sm text-slate-500">
-                        BTC / USD
-                    </p>
-                </div> */}
-
-                {/* <div className="flex gap-2">
-                    <button className="px-3 py-1 rounded-md bg-blue-100 text-blue-600 text-sm">
-                        7D
-                    </button>
-
-                    <button className="px-3 py-1 rounded-md text-sm text-slate-500">
-                        1M
-                    </button>
-
-                    <button className="px-3 py-1 rounded-md text-sm text-slate-500">
-                        1Y
-                    </button>
-                </div> */}
-
-            </div>
+            {/* <div className="flex items-center justify-between mb-5">
+                {/* Add your title or filters here */}
+            {/* Example: <h2 className="font-bold text-slate-800 dark:text-slate-100">Price Chart</h2> */}
+            {/* </div> */}
 
             {/* Chart placeholder */}
-            <div className="h-64 flex items-center justify-center rounded-xl bg-slate-50">
-                {/* <p className="text-slate-400"> */}
+            <div className="h-64 flex items-center justify-center rounded-xl bg-slate-50 dark:bg-slate-900 transition-colors duration-200">
                 <AnalyticsChart />
-                {/* </p> */}
             </div>
 
         </div>
     );
 }
-

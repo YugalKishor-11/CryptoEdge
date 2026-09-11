@@ -1,51 +1,51 @@
-import { useState, useEffect } from 'react';
-import { Moon, Sun } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Moon, Sun } from "lucide-react";
 
 export default function ThemeMode() {
-  // 1. Initialize state by checking localStorage or OS preference
   const [isDark, setIsDark] = useState(() => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      return savedTheme === 'dark';
+    // 1. Check local storage or system preference on initial render
+    if (typeof window !== "undefined") {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        return savedTheme === "dark";
+      }
+      return window.matchMedia("(prefers-color-scheme: dark)").matches;
     }
-    // If no saved preference, check the user's system settings
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return false;
   });
 
-  // 2. Whenever `isDark` changes, update the HTML tag and save to localStorage
   useEffect(() => {
-    const root = document.documentElement; // This gets the <html> tag
-
+    const root = document.documentElement;
     if (isDark) {
-      root.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
+      root.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     } else {
-      root.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
+      root.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     }
   }, [isDark]);
 
   return (
-    <button
-      onClick={() => setIsDark(!isDark)}
-      className="p-2 rounded-lg bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors"
-      aria-label="Toggle Dark Mode"
-    >
-      {/* 3. Swap the icon based on the current state */}
-      {isDark ? (
-        <>
-          <div className="flex items-center">
-            <Sun className="w-5 h-5" />
-            <h1 className='text-xl'>Light</h1>
-          </div>
-        </>
-      ) : (<>
-        <div className="flex items-center">
-          <Moon className="w-5 h-5" />
-          <h1 className='text-xl'>Dark</h1>
-        </div>
-      </>
-      )}
-    </button>
+    <div className="flex items-center ml-3.5 justify-center gap-3">
+      {/* Optional icon indicator */}
+      <span className="text-slate-500 dark:text-slate-400">
+        {isDark ? <Moon size={18} /> : <Sun size={18} />}
+      </span>
+
+      {/* Switch Button */}
+      <button
+        type="button"
+        role="switch"
+        aria-checked={isDark}
+        onClick={() => setIsDark((prev) => !prev)}
+        className={`relative inline-flex h-5 w-10 shrink-0 cursor-pointer rounded-full p-0.5 transition-colors duration-200 ease-in-out focus:outline-none ${isDark ? "bg-blue-600" : "bg-slate-300"
+          }`}
+      >
+        <span
+          className={`pointer-events-none inline-block h-4 w-4 rounded-full bg-white shadow-md transform transition-transform duration-200 ease-in-out ${isDark ? "translate-x-5" : "translate-x-0"
+            }`}
+        />
+      </button>
+    </div>
   );
 }

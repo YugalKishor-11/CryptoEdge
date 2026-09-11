@@ -6,11 +6,11 @@ import CryptoAISection from '../components/Dashboard/cryptoAI/CryptoAISection';
 
 export default function Home() {
     return (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 transition-colors duration-200">
 
             {/* ROW 1: Balance, Analytics, and Top Movers */}
             <div className="flex flex-col h-auto lg:flex-row lg:h-132 px-4 pt-4 gap-4">
-                <div className="flex flex-col w-full lg:w-2/3 p-4 gap-5 bg-white border border-slate-200 rounded-2xl overflow-hidden h-auto">
+                <div className="flex flex-col w-full lg:w-2/3 p-4 gap-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden h-auto shadow-sm transition-colors duration-200">
                     <BalanceSection />
                     <AnalyticsSection />
                 </div>

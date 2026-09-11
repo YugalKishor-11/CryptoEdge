@@ -7,7 +7,8 @@ import MarketTab from './pages/MarketTab';
 import LoginField from './pages/LoginField';
 import Trade from './pages/Trade';
 import AnalyticsChartCard from './pages/AnalyticsChartCard';
-import  Settings  from './pages/Settings';
+import Settings from './pages/Settings';
+import CryptoAIChat from './pages/CryptoAIChat';
 
 // Initialize React Query
 const queryClient = new QueryClient({
@@ -42,10 +43,11 @@ export default function App() {
             <Route index element={<Home />} />
             <Route path='/home' element={<Home />} />
             <Route path='/myasset' element={<MyAsset />} />
-            <Route path='/trade' element={<Trade/>}/>
+            <Route path='/trade' element={<Trade />} />
             <Route path='/market' element={<MarketTab />} />
-            <Route path='/analytic' element={<AnalyticsChartCard/>}/>
-            <Route path='/settings' element={<Settings/>}/>
+            <Route path='/analytic' element={<AnalyticsChartCard />} />
+            <Route path='/settings' element={<Settings />} />
+            <Route path='/aichat' element={<CryptoAIChat />} />
             {/* You will add /asset/:symbol and /portfolio routes here later */}
           </Route>
         </Routes>

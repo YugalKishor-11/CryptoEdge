@@ -4,7 +4,7 @@ import { ChevronDown } from "lucide-react"
 
 export default function BalanceCard() {
     return (
-        <div className="rounded-2xl bg-[#429EFF] p-4 h-32 text-white ">
+        <div className="rounded-2xl bg-[#429EFF] dark:bg-slate-800 p-4 h-32 text-white transition-colors duration-200">
 
             <div className="flex justify-between items-center">
 
@@ -22,7 +22,6 @@ export default function BalanceCard() {
                         </span>
                         <ChevronDown size={20} />
                     </div>
-
 
                     <img src={Button} alt="three dot" className="w-12 h-auto flex items-center" />
                 </div>
@@ -42,4 +41,3 @@ export default function BalanceCard() {
         </div>
     );
 }
-

@@ -11,12 +11,19 @@ export default function CryptoAISection() {
             bg-linear-to-br
             from-blue-600
             to-purple-600
+            dark:from-slate-800
+            dark:to-slate-900
+            transition-colors 
+            duration-200
             p-4
             lg:p-6
             text-white
             h-full
             flex
             flex-col
+            shadow-sm
+            dark:border
+            dark:border-slate-700/50
         ">
             {/* Header */}
             <div className="flex items-center justify-between mb-6">
@@ -26,9 +33,11 @@ export default function CryptoAISection() {
                         h-10
                         rounded-xl
                         bg-white/20
+                        dark:bg-white/10
                         flex
                         items-center
                         justify-center
+                        transition-colors
                     ">
                         <Sparkles size={20} />
                     </div>
@@ -47,6 +56,8 @@ export default function CryptoAISection() {
                     text-sm
                     font-medium
                     hover:underline
+                    text-white/90
+                    hover:text-white
                 ">
                     Explore AI
                     <ArrowRight size={16} />
@@ -61,7 +72,8 @@ export default function CryptoAISection() {
                 xl:grid-cols-2
                 gap-4
                 mb-4
-                text-black
+                text-slate-900
+                dark:text-slate-100
             ">
                 <AIFeatureCard
                     title="AI Market Predictor"

@@ -10,7 +10,6 @@ import CryptoAISec from "../components/Dashboard/cryptoAI/CryptoAISec";
 import { useState } from "react";
 import FastActionModal from "../components/Dashboard/buying/FastActionModal";
 
-
 export default function MyAsset() {
   const [showAction, setShowAction] = useState(false);
 
@@ -20,39 +19,36 @@ export default function MyAsset() {
   });
 
   return (
-    <main className=" p-5 ">
+    <main className="p-5 transition-colors duration-200">
       {/* ================= TOP CARDS ================= */}
-      <section className=" grid lg:grid-cols-3 gap-5 xl:grid-cols-3 grid-cols-1  items-start">
+      <section className="grid lg:grid-cols-3 gap-5 xl:grid-cols-3 grid-cols-1 items-start">
         {/* LEFT SIDE */}
         <div className="flex flex-col lg:h-auto lg:col-span-2 xl:h-full gap-4 md:grid-cols-2">
 
-          <div className="flex flex-col md:flex-row w-full lg:h-1/2 grid-cols-2 gap-5">
+          <div className="flex flex-col md:flex-row w-full bg-white dark:bg-slate-900 border border-transparent dark:border-slate-800 p-4 rounded-2xl lg:h-1/2 grid-cols-2 gap-5 shadow-sm transition-colors duration-200">
             <MyBalanceCard />
             <SpendingOverviewCard />
-
           </div>
+
           <div className="flex">
             <MarketsTable coins={coins} loading={isLoading} />
           </div>
         </div>
 
-
         {/* RIGHT SIDE */}
-        <div className="space-y-5 grid-cols-1 ">
+        <div className="space-y-5 grid-cols-1">
           <BestToBuyCard coins={coins} />
           <FastActionCard onOpen={() => setShowAction(true)} />
           <CryptoAISec />
         </div>
       </section>
 
-      {showAction &&
+      {showAction && (
         <FastActionModal
           isOpen={showAction}
-          onClose={() => setShowAction(false)} />
-      }
-
+          onClose={() => setShowAction(false)}
+        />
+      )}
     </main>
-
   );
 }
-

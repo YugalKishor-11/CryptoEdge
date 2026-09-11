@@ -3,7 +3,7 @@ import { Wallet, ChevronDown, MoreHorizontal, ArrowLeftRight } from "lucide-reac
 
 export default function MyBalanceCard() {
     return (
-        <div className="relative h-64 md:h-auto md:w-1/2 lg:w-full lg:h-auto overflow-hidden rounded-3xl bg-blue-400 p-5 text-white shadow-md">
+        <div className="relative h-64 md:h-auto md:w-1/2 lg:w-full lg:h-auto overflow-hidden rounded-3xl bg-blue-400 dark:bg-slate-800 p-5 text-white shadow-md transition-colors duration-200">
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20">

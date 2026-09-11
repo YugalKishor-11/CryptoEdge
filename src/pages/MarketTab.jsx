@@ -14,10 +14,9 @@ export default function MarketTab() {
         keepPreviousData: true, // Keeps old data visible while fetching next page smoothly
     });
 
-
     return (
         <>
-            <main className="p-4 max-w-7xl w-full bg-white rounded-2xl">
+            <main className="p-4 max-w-7xl w-full bg-white dark:bg-slate-900 rounded-2xl border border-transparent dark:border-slate-800 shadow-sm transition-colors duration-200">
                 <MarketsTable coins={coins} loading={isLoading} />
 
                 <Pagination
@@ -28,7 +27,6 @@ export default function MarketTab() {
                     totalItems={180}
                 />
             </main>
-
         </>
-    )
+    );
 }
