@@ -1,8 +1,11 @@
 import Icon from "../../../assets/icon.svg"
 import Button from "../../../assets/Button.svg"
 import { ChevronDown } from "lucide-react"
+import { useTrading } from "../../../context/TradingContext";
 
 export default function BalanceCard() {
+    const { fiatBalance } = useTrading();
+
     return (
         <div className="rounded-2xl bg-[#429EFF] dark:bg-slate-800 p-4 h-32 text-white transition-colors duration-200">
 
@@ -30,7 +33,7 @@ export default function BalanceCard() {
 
             <div className="mt-4 flex justify-between">
                 <h3 className="text-2xl font-bold">
-                    $120,980
+                    ${fiatBalance.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                 </h3>
 
                 <p className="mt-2 text-sm">

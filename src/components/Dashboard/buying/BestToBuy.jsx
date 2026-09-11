@@ -3,7 +3,7 @@ import { BarChart3, MoreHorizontal } from "lucide-react";
 import { ResponsiveContainer, AreaChart, Area } from "recharts";
 
 export default function BestToBuy({ coins = [] }) {
-    const coin = coins[0];
+    const coin = coins[3];
 
     if (!coin) {
         return (

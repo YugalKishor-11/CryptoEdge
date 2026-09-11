@@ -1,7 +1,9 @@
 // src/components/Dashboard/Sidebar/FastActionCard.jsx
 import { Sparkles, ArrowUpRight } from "lucide-react";
+import { useTrading } from "../../../context/TradingContext";
 
 export default function FastActionCard({ onOpen }) {
+    const { fiatBalance } = useTrading();
     return (
         <div className="rounded-3xl bg-white dark:bg-slate-900 p-5 shadow-sm border gap-1 border-slate-100 dark:border-slate-800 transition-colors duration-200">
 
@@ -28,7 +30,9 @@ export default function FastActionCard({ onOpen }) {
                 <p className="text-xs text-gray-400 dark:text-slate-500">Pay with</p>
                 <div className="mt-1 flex justify-between text-slate-900 dark:text-slate-100 transition-colors">
                     <span className="text-sm font-medium">USD Wallet</span>
-                    <span className="font-semibold">$7,598.00</span>
+                    <span className="font-semibold">
+                        ${fiatBalance.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                    </span>
                 </div>
             </div>
 

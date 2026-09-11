@@ -9,10 +9,13 @@ import Menu from "../../assets/menu.svg";
 import Logo from "../../assets/SearchLine.svg";
 import NotificationDropdown from "./NotificationDropDown";
 
-export default function Navbar({ onClick }) {
+import FastActionModal from "../Dashboard/buying/FastActionModal";
+
+export default function Navbar({ onClick, coins }) {
     const [search, setSearch] = useState("");
     const [showNotifications, setShowNotifications] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isTradeOpen, setIsTradeOpen] = useState(false);
 
     const navLinks = [
         { name: 'Home', path: '/home' },
@@ -108,6 +111,7 @@ export default function Navbar({ onClick }) {
                             transition-colors
                             cursor-pointer
                         "
+                        onClick={() => setIsTradeOpen(true)}
                     >
                         Buy & Sell
                     </button>
@@ -157,6 +161,11 @@ export default function Navbar({ onClick }) {
                 </div>
 
             </div>
+            <FastActionModal
+                isOpen={isTradeOpen}
+                onClose={() => setIsTradeOpen(false)}
+                coins={coins}
+            />
 
             {/* Mobile Dropdown Menu */}
             {isMobileMenuOpen && (

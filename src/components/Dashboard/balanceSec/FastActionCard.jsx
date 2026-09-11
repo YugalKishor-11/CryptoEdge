@@ -2,8 +2,12 @@ import Blu from "../../../assets/bluDoll.svg"
 import Money from '../../../assets/money-dollar.svg'
 import Right from '../../../assets/arrow-right-up.svg'
 import Left from '../../../assets/arrow-left-down.svg'
+import { useTrading } from "../../../context/TradingContext";
 
 export default function FastActionCard() {
+
+    const { fiatBalance } = useTrading();
+
     return (
         <div className="rounded-2xl bg-white dark:text-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-3 h-full lg:h-32 gap-4 transition-colors duration-200">
 
@@ -28,7 +32,7 @@ export default function FastActionCard() {
                         </span>
                     </div>
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-100 transition-colors">
-                        $7,598.00
+                        ${fiatBalance.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                     </h3>
                 </div>
             </div>

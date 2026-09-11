@@ -1,7 +1,11 @@
 // src/components/Dashboard/Balance/MyBalanceCard.jsx
 import { Wallet, ChevronDown, MoreHorizontal, ArrowLeftRight } from "lucide-react";
+import { useTrading } from "../../../context/TradingContext";
 
 export default function MyBalanceCard() {
+
+    const { fiatBalance } = useTrading();
+
     return (
         <div className="relative h-64 md:h-auto md:w-1/2 lg:w-full lg:h-auto overflow-hidden rounded-3xl bg-blue-400 dark:bg-slate-800 p-5 text-white shadow-md transition-colors duration-200">
             <div className="flex items-center justify-between">
@@ -22,7 +26,9 @@ export default function MyBalanceCard() {
             </div>
 
             <div className="mt-6 flex justify-between">
-                <h2 className="text-3xl font-semibold">$120,980</h2>
+                <h2 className="text-3xl font-semibold">
+                    ${fiatBalance.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                </h2>
                 <p className="mt-2 text-sm text-white/80">
                     <span className="text-white">+$250</span> this week
                 </p>

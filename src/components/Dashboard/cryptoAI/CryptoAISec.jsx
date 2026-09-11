@@ -4,8 +4,8 @@ import robo from "../../../assets/Robot.svg"
 
 export default function CryptoAISec() {
     return (
-        <section className="overflow-hidden rounded-3xl bg-linear-to-r from-blue-500 to-purple-500 dark:from-slate-800 dark:to-slate-900 p-3 text-white shadow-md transition-colors duration-200 dark:border dark:border-slate-700/50">
-            <div className="flex flex-col justify-between gap-5 lg:gap-3 md:flex-row md:items-center">
+        <section className="overflow-hidden rounded-3xl  bg-linear-to-r from-blue-500 to-purple-500 dark:from-slate-800 dark:to-slate-900 p-3 text-white shadow-md transition-colors duration-200 dark:border dark:border-slate-700/50">
+            <div className="flex flex-col justify-between gap-5 m-4 lg:gap-3 md:flex-row md:items-center">
                 <div>
                     <div className="mb-3 flex items-center gap-2">
                         <Bot size={25} />
